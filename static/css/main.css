@@ -130,7 +130,7 @@ centered within the allotted space */
   align-items: center;
 }
 
-/* .habit {
+.habit {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -175,51 +175,5 @@ centered within the allotted space */
   border: none;
   background-color: unset;
   cursor: pointer;
-} */
-
-.habit-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
-.habit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 3px solid black;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #fff2d8;
-  width: 100%;
-}
-
-.habit.completed {
-  background-color: #e0ffe0;
-}
-
-.habit__form {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.habit__button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  text-align: left;
-  width: 100%;
-  cursor: pointer;
-  padding: 0;
-}
-
-.habit__button:focus {
-  outline: none;
-}
-
-.habit__icon {
-  width: 24px;
-  height: 24px;
-  color: #4caf50;
-}
