@@ -22,11 +22,11 @@
         <main class="main">
             <section class="dates">
                 {% for date in date_range(selected_date) %}
-                <a class="dates__link {{ 'dates__link--current' if loop.index0 == 3 else '' }}" href="{{ url_for('to-do.index', date=date) }}">
+                <a class="dates__link {{ 'dates__link--current' if date == selected_date else '' }}" href="{{ url_for('to-do.index', date=date) }}">
                     <time class="date" datetime="{{ date }}">
-                        <span>{{ date.strftime("%a") }}</span>
-                        <span>{{ date.strftime("%d") }}</span>
-                        <span>{{ date.strftime("%b") }}</span> <!-- Added month display -->
+                        <span>{{ datetime.datetime.strptime(date, '%Y-%m-%d').strftime("%a") }}</span>
+                        <span>{{ datetime.datetime.strptime(date, '%Y-%m-%d').strftime("%d") }}</span>
+                        <span>{{ datetime.datetime.strptime(date, '%Y-%m-%d').strftime("%b") }}</span> <!-- Added month display -->
                     </time>
                 </a>
                 {% endfor %}

@@ -40,8 +40,6 @@ body {
   font-size: 1.5rem;
 }
 
-/* The form class is used for the form where new habits are added. It's not for 
-all form elements */
 .form {
   display: flex;
   flex-direction: column;
@@ -60,15 +58,30 @@ all form elements */
   margin-bottom: 1rem;
 }
 
-.form__button {
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+.form__button, .home__button {
   font-size: inherit;
   background: #f9dba0;
   cursor: pointer;
   border-radius: 6px;
   padding: 0.5rem 2.5rem;
-  align-self: flex-end;
   border: none;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
 }
+
 
 .dates {
   display: flex;
@@ -88,9 +101,6 @@ all form elements */
   border-radius: 6px;
 }
 
-/* Selects the first, second, penultimate and final elements in the dates__link section
-and hides them on small screens. As the screen gets larger, we gradually display more 
-and more of the date elements.
 
 See the media queries below */
 .dates__link:first-of-type,
@@ -100,7 +110,6 @@ See the media queries below */
   display: none;
 }
 
-/* Comes into effect when the screen is 400px wide. Reveals the second and second-to-last date link*/
 @media screen and (min-width: 25rem) {
   .dates__link:nth-of-type(2),
   .dates__link:nth-last-of-type(2) {
@@ -108,7 +117,7 @@ See the media queries below */
   }
 }
 
-/* Comes into effect when the screen is 560px wide. Reveals the first and last date link */
+
 @media screen and (min-width: 35rem) {
   .dates__link:first-of-type,
   .dates__link:last-of-type {
@@ -116,14 +125,11 @@ See the media queries below */
   }
 }
 
-/* Changes the background colour of the current date. This class is applied conditionally
-by logic in the jinja template */
 .dates__link--current {
   background: #f9dba0;
 }
 
-/* Ensures the day of the week and the date number sit on top of each other and are
-centered within the allotted space */
+
 .date {
   display: flex;
   flex-direction: column;
